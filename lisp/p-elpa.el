@@ -14,6 +14,10 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 ;; 使用Use Page 管理扩展
 (setq
  use-package-always-ensure t
